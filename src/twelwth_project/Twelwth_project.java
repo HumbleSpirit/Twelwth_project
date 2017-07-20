@@ -111,6 +111,7 @@ public class Twelwth_project {
         //System.out.println(man1.GetSalary());
         e[0] = man1;
         e[1] = new Employee(20);
+        //Manager man2 = (Manager)e[0]; Приведение к новому типу
         for (int i = 0; i < e.length; i++) 
         {
             //System.out.println(e[i].GetSalary());    
