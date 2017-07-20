@@ -7,16 +7,45 @@ package twelwth_project;
 
 class Math 
     {
-        static int a;
-        int b;
+        private static int a;
+        //int b;
         
-    static int Temp()
+   /* static int Temp()
         {
             return a = 10;
-        }
+        }*/
+    static 
+    {
+        //System.out.println("Static");
+        a = 0;
     }
+    public Math()
+    {
+        //System.out.println("Default");
+        a++;
+    }
+    static void Temp2()
+    {
+        //System.out.println("Temp");
+        System.out.println(a);
+    }
+    
+    }
+//Статические переменные разделяются между объектами класса
 
-
+class Employee
+{
+    private int salary;
+    
+    public Employee()
+    {
+        salary = 100;
+    }
+    public int GetSalary()
+    {
+        return salary;
+    }
+}
 public class Twelwth_project {
 
     /**
@@ -24,14 +53,16 @@ public class Twelwth_project {
      */
     public static void main(String[] args) 
     {
-        Math math1 = new Math();
-        Math math2 = new Math();
-        System.out.println(Math.Temp());
-        Math.a = 40;
+        //Math math1 = new Math();
+        //Math math2 = new Math();
+       // System.out.println(Math.Temp());
+        //Math.a = 5;
         //Math.b = 50;
-        math1.a = 80;
-        math1.b = 60;
-        
+        //math1.a = 80;
+        //math1.b = 60;
+        //Math.Temp2();
+        Employee empl1 = new Employee();
+        System.out.println();
     }
     
 }
