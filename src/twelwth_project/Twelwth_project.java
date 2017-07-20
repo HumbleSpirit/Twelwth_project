@@ -35,7 +35,7 @@ class Math
 
 class Employee
 {
-    protected int salary;
+     int salary;
     
     public Employee(int a)
     {
@@ -59,6 +59,33 @@ class Manager extends Employee
     public int GetSalary()
     {
         return super.GetSalary() + bonus;
+    }
+}
+abstract class Human
+{
+    String name;
+
+    public Human(String name) 
+    {
+        this.name = name;
+    }
+    
+    abstract void Info();
+}
+
+class Person extends Human
+{
+    String Position;
+    
+    Person(String name, String pos)
+            {
+                super(name);
+                Position = pos;
+            }
+    
+    public void Info()
+    {
+        System.out.println(Position + " " + name);
     }
 }
 
@@ -86,8 +113,12 @@ public class Twelwth_project {
         e[1] = new Employee(20);
         for (int i = 0; i < e.length; i++) 
         {
-            System.out.println(e[i].GetSalary());    
+            //System.out.println(e[i].GetSalary());    
         }
+        Person pers1 = new Person("Ivan", "CEO");
+        pers1.Info();
+        Human pers2 = new Person("Nick", "Sec");
+        pers2.Info();
     }
     
 }
